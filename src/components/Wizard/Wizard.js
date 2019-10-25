@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default class Wizard extends React.Component {
     constructor(props) {
@@ -55,9 +55,9 @@ export default class Wizard extends React.Component {
                 <input value={state} onChange={(e) => this.universalInput("state", e.target.value)} />
                 <label>ZIP Code:</label>
                 <input value={zipcode} onChange={(e) => this.universalInput("zipcode", e.target.value)} />
-                {/* <Link to='/'>
+                <Link to='/'>
                     <button className="add-new">Cancel</button>
-                </Link> */}
+                </Link>
                 </form>
             
         )

@@ -7,5 +7,7 @@ const app = express();
 
 const { CONNECTION_STRING } = process.env;
 
+const { getAllHouses } = require('./controller');
+
 const port = 4000;
 app.listen(port, () => console.log(`server is listening on port ${port}`));

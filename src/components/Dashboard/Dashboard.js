@@ -9,6 +9,7 @@ export default class Dashboard extends React.Component {
         this.state = {
             allHouses: []
         }
+        this.getAllHouses = this.getAllHouses.bind(this);
     } 
 
     componentDidMount() {
@@ -21,6 +22,16 @@ export default class Dashboard extends React.Component {
                 allHouses: response.data
             });
         });
+    }
+
+    deleteHouse(house) {
+        Axios.delete(`http://localhost:3000/allhouses/${house.name}`)
+        .then(response => {
+            this.setState({
+                allHouses: response.data
+            });
+        })
+        .catch(err => console.log(err));
     }
     
     render() {

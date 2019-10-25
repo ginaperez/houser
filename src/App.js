@@ -15,12 +15,12 @@ class App extends React.Component {
     <HashRouter>
     <div className="App">
       <Header />
-      <House />
+      <House getAllHouses={this.getAllHouses} />
       {routes}
     </div>
     </HashRouter>
-  )
-}
+    )
+  }
 };
 
 export default App;
