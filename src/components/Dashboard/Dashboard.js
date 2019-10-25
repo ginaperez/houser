@@ -1,8 +1,28 @@
 import React from 'react'
 import House from "../House/House";
 import { Link } from "react-router-dom";
+import Axios from 'axios';
 
 export default class Dashboard extends React.Component {    
+    constructor(props) {
+        super(props)
+        this.state = {
+            allHouses: []
+        }
+    } 
+
+    componentDidMount() {
+        this.getAllHouses();
+    }
+
+    getAllHouses() {
+        Axios.get("http://localhost:3000/allhouses").then(response => {
+            this.setState({
+                allHouses: response.data
+            });
+        });
+    }
+    
     render() {
         return (
             <div>
