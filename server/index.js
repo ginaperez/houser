@@ -4,10 +4,25 @@ const massive = require('massive');
 require('dotenv').config();
 
 const app = express();
+app.use(express.json());
 
-const { CONNECTION_STRING } = process.env;
+const { CONNECTION_STRING, SESSION_SECRET } = process.env;
 
-const { getAllHouses } = require('./controller');
+massive(CONNECTION_STRING).then(db => {
+    app.set('db', db);
+    console.log('db connected');
+});
+
+app.use(
+    session({
+        resave: true,
+        saveUninitialized: false,
+        secret: SESSION_SECRET
+    })
+);
+
+app.post('/allhouses/:id', controller.addHouse);
+app.delete('/allhouses/:id', conroller.deleteHouse);
 
 const port = 4000;
 app.listen(port, () => console.log(`server is listening on port ${port}`));
