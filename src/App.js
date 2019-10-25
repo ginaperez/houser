@@ -1,10 +1,9 @@
 import React from 'react';
 import './App.css';
 import { HashRouter } from 'react-router-dom';
-import Dashboard from "./components/Dashboard/Dashboard";
 import Header from "./components/Header/Header";
 import House from "./components/House/House";
-import Wizard from "./components/Wizard/Wizard";
+import routes from "./route"
 
 class App extends React.Component {
   render() {
@@ -14,6 +13,7 @@ class App extends React.Component {
     <div className="App">
       <Header />
       <House />
+      {routes}
     </div>
     </HashRouter>
   )
