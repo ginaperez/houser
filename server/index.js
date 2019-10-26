@@ -22,7 +22,7 @@ app.use(
 );
 
 app.post('/allhouses/:id', controller.addHouse);
-app.delete('/allhouses/:id', conroller.deleteHouse);
+app.delete(`/allhouses/?id=${id}`, conroller.deleteHouse);
 
 const port = 4000;
 app.listen(port, () => console.log(`server is listening on port ${port}`));
