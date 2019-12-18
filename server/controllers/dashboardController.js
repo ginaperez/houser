@@ -6,7 +6,7 @@ module.exports = {
         res.status(200).send(getHouses);
     },
     addHouse: (req, res, next) => {
-        const { house } = req.query;
+        const { house_name } = req.body;
         res.status(200).send('all good');
     },
      

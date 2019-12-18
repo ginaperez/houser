@@ -17,15 +17,24 @@ export default class Dashboard extends React.Component {
     }
 
     displayHouses() {
-        Axios.get("http://localhost:3000/allhouses").then(response => {
+        Axios.get(`/api/properties`).then(response => {
             this.setState({
                 allHouses: response.data
             });
         });
     }
 
-    deleteHouse(house) {
-        Axios.delete(`http://localhost:3000/allhouses/${house.name}`)
+    addHouse() {
+        Axios.post(`api/properties`).then(response => {
+            this.setState({
+                allHouses: response.data
+            });
+            this.props.displayHouses(this.props)
+        }).catch(err => console.log(err))
+    }
+
+    deleteHouse(id) {
+        Axios.delete(`/api/properties/${id}`)
         .then(response => {
             this.setState({
                 allHouses: response.data
