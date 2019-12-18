@@ -9,14 +9,14 @@ export default class Dashboard extends React.Component {
         this.state = {
             allHouses: []
         }
-        this.getAllHouses = this.getAllHouses.bind(this);
+        this.displayHouses = this.displayHouses.bind(this);
     } 
 
     componentDidMount() {
-        this.getAllHouses();
+        this.displayHouses();
     }
 
-    getAllHouses() {
+    displayHouses() {
         Axios.get("http://localhost:3000/allhouses").then(response => {
             this.setState({
                 allHouses: response.data
