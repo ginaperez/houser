@@ -1,7 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import axios from 'axios';
 import './Auth.scss';
-import Redirect from 'react-router-dom';
+import { Redirect } from 'react-router-dom';
+import { connect } from "react-redux";
+import { setUser } from '../../redux/reducer';
 
 class AuthComponent extends React.Component {
     constructor(props) {
@@ -31,9 +33,9 @@ class AuthComponent extends React.Component {
     }
     
     async login() {
-        const { email, password } = this.state;
+        const { username, password } = this.state;
         try {
-            const loggedInUser = await axios.post(`/api/auth/login`, { email, password });
+            const loggedInUser = await axios.post(`/api/auth/login`, { username, password });
             this.props.setUser(loggedInUser.data)
         } catch (error) {
             this.setState({
@@ -48,7 +50,7 @@ class AuthComponent extends React.Component {
         if(failed && register) {
             errorMessage = <p className='error'>User already exists! Please log in.</p>
         } else if(failed && !register) {
-            errorMessage = <p className='error'>Incorrect email or password.</p>
+            errorMessage = <p className='error'>Incorrect username or password.</p>
         } else {
             errorMessage = <p className='error'></p>
         }
