@@ -6,6 +6,9 @@ import Header from "./components/Header/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Wizard1 from './components/Wizard/Wizard1/Wizard1';
 import Wizard2 from './components/Wizard/Wizard2/Wizard2';
+import Wizard3 from './components/Wizard/Wizard3/Wizard3';
+import Wizard4 from './components/Wizard/Wizard4/Wizard4';
+import Wizard5 from './components/Wizard/Wizard5/Wizard5';
 import House from "./components/House/House";
 import AuthComponent from "./components/Auth/Auth";
 // import routes from "./route";
@@ -46,6 +49,18 @@ class App extends React.Component {
             />
             <Route path="/wizard/2" render={props => (
               <Wizard2 changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+            <Route path="/wizard/3" render={props => (
+              <Wizard3 changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+            <Route path="/wizard/4" render={props => (
+              <Wizard4 changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+            <Route path="/wizard/5" render={props => (
+              <Wizard5 changeTitle={this.changeTitle} {...props} />
             )}
             />
           </Switch>

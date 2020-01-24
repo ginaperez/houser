@@ -28,7 +28,7 @@ class Wizard2 extends React.Component {
         return (
             <div className="wizard-container">
                 <WizardMain />
-                <h1 className='step-1'>Step 2</h1>
+                <h1 className='step-2'>Step 2</h1>
                 <div className="dot-container">
                     <img src={StepCompleted} alt='Step Completed'></img>
                     <img src={StepActive} alt='Active Step'></img>
