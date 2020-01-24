@@ -1,6 +1,9 @@
 @import '../../../App.scss';
 
 .wizard-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color: linear-gradient(to bottom, #e2f3ea, #ffffff);
     .step-1 {
         height: 40px;
@@ -13,17 +16,30 @@
     form {
         display: flex;
         flex-direction: column;
-        width: 800px;
-        justify-content: space-evenly;
+        align-items: center;
         font-weight: bold;
         .label {
-            display: flex;
+            margin-top: 40px;
+            margin-bottom: 15px;
         }
         .input {
-            display: flex;
+            border: 2px solid $dark-green;
+            width: 500px;
+            height: 25px;
+        }
+        .desc-input {
+            height: 70px;
+            border: 2px solid $dark-green; 
+            width: 500px;
         }
         .next-step {
             @extend %dark-green-button;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            width: 125px;
+            height: 30px;
+            font-size: 14px;
+            cursor: pointer;
         }
     }
 }

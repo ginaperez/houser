@@ -26,4 +26,7 @@ $beige: #f6f0f0;
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     background-color: #afd4c0;
+    .main-container {
+        background-color: linear-gradient(to bottom, #e2f3ea, #ffffff);
+    }
   }

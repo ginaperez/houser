@@ -27,28 +27,29 @@ class App extends React.Component {
   }
 
   render() {
-
     return (
       <div className="App">
         <Header title={this.state.title} user={this.props.user} />
-        <Switch>
-          <Route exact path="/" render={props => (
-            <AuthComponent changeTitle={this.changeTitle} {...props} />
-          )}
-          />
-          <Route path="/dashboard" render={props => (
-            <Dashboard changeTitle={this.changeTitle} {...props} />
-          )}
-          />
-          <Route path="/wizard/1" render={props => (
-            <Wizard1 changeTitle={this.changeTitle} {...props} />
-          )}
-          />
-          <Route path="/wizard/2" render={props => (
-            <Wizard2 changeTitle={this.changeTitle} {...props} />
-          )}
-          />
-        </Switch>
+        <div className="main-container">
+          <Switch>
+            <Route exact path="/" render={props => (
+              <AuthComponent changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+            <Route path="/dashboard" render={props => (
+              <Dashboard changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+            <Route path="/wizard/1" render={props => (
+              <Wizard1 changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+            <Route path="/wizard/2" render={props => (
+              <Wizard2 changeTitle={this.changeTitle} {...props} />
+            )}
+            />
+          </Switch>
+        </div>
       </div>
       );
     } 

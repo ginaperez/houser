@@ -44,10 +44,10 @@ export default class Wizard1 extends React.Component {
                         propertyDescription: "",
                     });
                 }}>
-                        <label className="label">Property Name:</label>
+                        <label className="label">Property Name</label>
                         <input value={propertyName} className="input" onChange={(e) => this.universalInput("propertyName", e.target.value)} />
                         <label className="label">Property Description</label>
-                        <input value={propertyDescription} className="input" onChange={(e) => this.universalInput("propertyDescription", e.target.value)} />
+                        <input value={propertyDescription} className="desc-input" onChange={(e) => this.universalInput("propertyDescription", e.target.value)} />
                         <button className='next-step'>Next Step</button>
                 </form>
             </div>
