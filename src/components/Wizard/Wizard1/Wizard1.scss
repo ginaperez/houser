@@ -1,0 +1,29 @@
+@import '../../../App.scss';
+
+.wizard-container {
+    background-color: linear-gradient(to bottom, #e2f3ea, #ffffff);
+    .step-1 {
+        height: 40px;
+    }
+    .dot-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width: 800px;
+        justify-content: space-evenly;
+        font-weight: bold;
+        .label {
+            display: flex;
+        }
+        .input {
+            display: flex;
+        }
+        .next-step {
+            @extend %dark-green-button;
+        }
+    }
+}

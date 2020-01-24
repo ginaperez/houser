@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import { setUser } from './redux/reducer';
 import Header from "./components/Header/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
-import Wizard from './components/Wizard/Wizard';
+import Wizard1 from './components/Wizard/Wizard1/Wizard1';
+import Wizard2 from './components/Wizard/Wizard2/Wizard2';
 import House from "./components/House/House";
 import AuthComponent from "./components/Auth/Auth";
 // import routes from "./route";
@@ -39,8 +40,12 @@ class App extends React.Component {
             <Dashboard changeTitle={this.changeTitle} {...props} />
           )}
           />
-          <Route path="/wizard" render={props => (
-            <Wizard changeTitle={this.changeTitle} {...props} />
+          <Route path="/wizard/1" render={props => (
+            <Wizard1 changeTitle={this.changeTitle} {...props} />
+          )}
+          />
+          <Route path="/wizard/2" render={props => (
+            <Wizard2 changeTitle={this.changeTitle} {...props} />
           )}
           />
         </Switch>

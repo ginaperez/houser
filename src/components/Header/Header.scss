@@ -1,0 +1,49 @@
+@import '../../App.scss';
+
+.header {
+    width: 100%;
+    height: 100px;
+    .divider {
+        min-height: 100px;
+        .head {
+            width: 100%;
+            height: 100px;
+            background-color: $dark-green;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 1;
+            position: fixed;
+            .logo-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .auth-logo {
+                    width: 60px;
+                    padding-right: 10px;
+                }
+                .houser-text {
+                    color: white;
+                    font-size: 40px;
+                    font-weight: bold;
+                    padding-right: 10px;
+                }
+                .dashboard-text {
+                    color: white;
+                    font-size: 40px;
+                    font-weight: lighter;
+                }
+            }
+            .navlink {
+                color: white;
+                text-decoration: none;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .navlink:hover {
+                color: $darkest-green;
+            }
+        }
+    }
+}

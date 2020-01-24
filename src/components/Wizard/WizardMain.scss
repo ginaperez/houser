@@ -1,0 +1,17 @@
+@import '../../App.scss';
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    height: 70px;
+    .new-listing-header {
+        font-weight: bold;
+        font-size: 25px;
+    }
+    .cancel {
+        background-color: $pink;
+        font-weight: bold;
+        height: 30px;
+    }
+}

@@ -1,5 +1,29 @@
+$darkest-green: #3B5249;
+$dark-green: #519872;
+$mint-green: #AFD4C0;
+$lime-green: #8Aea92; 
+$pink: #fec2c2;
+$beige: #f6f0f0;
+
+%lime-button {
+    background-color: $lime-green;
+    color: black;
+    border: 2px solid $lime-green;
+}
+
+%dark-green-button {
+    background-color: $darkest-green;
+    color: white;
+    border: 2px solid $darkest-green;
+}
+
+@font-face {
+    font-family: 'Open Sans', sans-serif;
+    src: url(https://fonts.googleapis.com/css?family=Open+Sans&display=swap);
+}
+
 .App {
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
     background-color: #afd4c0;
-    
   }

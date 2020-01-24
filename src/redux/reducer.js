@@ -4,6 +4,7 @@ const initialState = {
 };
 
 export const SET_USER = "SET_USER";
+export const LOGOUT_USER = "LOGOUT_USER";
 
 export default function reducer(state = initialState, action) {
     const { type, payload } = action;
@@ -13,6 +14,11 @@ export default function reducer(state = initialState, action) {
                 ...state,
                 user: payload
             };
+        case LOGOUT_USER:
+            return {
+                ...state,
+                user: null
+            }
         default:
             return state;
     };
@@ -24,3 +30,10 @@ export function setUser(user) {
         payload: user
     };
 };
+
+export function logOutUser() {
+    return {
+        type: LOGOUT_USER,
+        payload: null
+    }
+}
