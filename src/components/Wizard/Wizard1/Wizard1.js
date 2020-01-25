@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import WizardMain from '../WizardMain';
+import Header from '../../Header/Header';
 import StepActive from '../../../images/step_active.png';
 import StepInactive from '../../../images/step_inactive.png';
 import './Wizard1.scss';
@@ -24,6 +24,7 @@ export default class Wizard1 extends React.Component {
         const { propertyName, propertyDescription } = this.state;
         return (
             <div className="wizard-container">
+                <Header title={this.state.title} user={this.props.user} />
                 <WizardMain />
                 <h1 className='step-1'>Step 1</h1>
                 <div className="dot-container">

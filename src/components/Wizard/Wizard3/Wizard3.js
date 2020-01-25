@@ -1,5 +1,5 @@
 import React from 'react';
-import axios from 'axios';
+import Header from '../../Header/Header';
 import StepActive from '../../../images/step_active.png';
 import StepInactive from '../../../images/step_inactive.png';
 import StepCompleted from '../../../images/step_completed.png';
@@ -24,6 +24,7 @@ class Wizard3 extends React.Component {
         const { image } = this.state;
         return (
             <div className="wizard-container">
+                <Header title={this.state.title} user={this.props.user} />
                 <WizardMain />
                 <h1 className='step-3'>Step 3</h1>
                 <div className="dot-container">

@@ -1,6 +1,7 @@
 const express = require('express');
 const dashboardController = require('./controllers/dashboardController');
 const authController = require('./controllers/authController');
+const searchController = require('./controllers/searchController');
 const massive = require('massive');
 const session = require('express-session');
 require('dotenv').config();
@@ -31,6 +32,8 @@ app.post(`api/auth/logout`, authController.logout);
 app.post('api/properties', dashboardController.addHouse);
 app.get(`api/properties`, dashboardController.displayHouses);
 app.delete(`api/properties/:id`, dashboardController.deleteHouse);
+
+app.get(`/api/search`, searchController.search);
 
 
 

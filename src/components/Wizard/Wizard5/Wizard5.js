@@ -1,6 +1,6 @@
 import React from 'react';
-import axios from 'axios';
 import WizardMain from '../WizardMain';
+import Header from '../../Header/Header';
 import StepActive from '../../../images/step_active.png';
 import StepCompleted from '../../../images/step_completed.png';
 
@@ -22,6 +22,7 @@ class Wizard5 extends React.Component {
         const { desiredRent } = this.state;
         return (
             <div className="wizard-container">
+                <Header title={this.state.title} user={this.props.user} />
                 <WizardMain />
                 <h1 className='step-5'>Step 5</h1>
                 <div className="dot-container">

@@ -1,15 +1,13 @@
 import React from 'react';
-import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+import { Route, Switch, withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
 import { setUser } from './redux/reducer';
-import Header from "./components/Header/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
 import Wizard1 from './components/Wizard/Wizard1/Wizard1';
 import Wizard2 from './components/Wizard/Wizard2/Wizard2';
 import Wizard3 from './components/Wizard/Wizard3/Wizard3';
 import Wizard4 from './components/Wizard/Wizard4/Wizard4';
 import Wizard5 from './components/Wizard/Wizard5/Wizard5';
-import House from "./components/House/House";
 import AuthComponent from "./components/Auth/Auth";
 // import routes from "./route";
 import './App.scss';
@@ -32,7 +30,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Header title={this.state.title} user={this.props.user} />
         <div className="main-container">
           <Switch>
             <Route exact path="/" render={props => (
